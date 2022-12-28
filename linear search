@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+bool isThere(int arr[], int size, int key) {
+
+    //base case
+
+    if (size==0) {
+        return 0;
+    }
+
+    if (arr[0]==key) {
+        return 1;
+    }
+
+    //recursive relation
+
+    bool final=isThere(arr+1, size-1, key);
+    return final;
+}
+
+int main() {
+
+    int arr[4]={1,2,3,4};
+
+    int c= isThere(arr,4,2);
+    if(c){
+        cout << "Found";
+
+    }
+
+    else{
+        cout << "Not found";
+    }
+}
