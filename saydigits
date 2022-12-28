@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void saydig(int n) {
+
+    vector <string> dig {"zero" ,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+    if (n==0) {
+        return ;
+    }
+    int digit= n%10;
+    n=n/10;
+
+    saydig(n);
+    cout << dig[digit] << " ";
+
+}
+
+int main() {
+
+    saydig(432);
+}
