@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+bool binFind(int arr, int s,int e, int key) {
+
+    int s=0;
+    int e= size-1;
+    int m=s+(e-s)/2;
+
+    //base case
+
+    if (s>e) {
+        return 0;
+    }
+
+    if (arr[m]==key) {
+
+        return 1;
+    }
+
+    if (arr[mid]<key) {
+        binFind(arr,mid+1,e,key );
+    }
+
+    if (arr[mid]>key) {
+        binFind(arr, s, mid-1,key);
+    }
+
+    
+
+}
+
