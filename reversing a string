@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+void reverse(string &str,  int i, int j){
+
+    
+
+    //base case
+
+    if(i>j){
+        return ;
+    }
+    swap(str[i], str[j]);
+    i++;
+    j--;
+
+    //recursive relation
+    reverse(str, i, j);
+}
+
+int main() {
+
+    string str="abcde";
+    reverse(str, 0,4);
+
+    for (int i=0; i<5; i++) {
+        cout << str[i];
+    }
+}
